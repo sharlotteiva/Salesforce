@@ -1,9 +1,21 @@
 pipeline {
   agent any
   stages {
-    stage('') {
+    stage('Development') {
       steps {
-        echo 'Development'
+        echo 'Development Complete'
+      }
+    }
+
+    stage('QA') {
+      steps {
+        git 'https://github.com/LeafPages/Salesforce'
+      }
+    }
+
+    stage('Deploy') {
+      steps {
+        echo 'Deployment Completed'
       }
     }
 
